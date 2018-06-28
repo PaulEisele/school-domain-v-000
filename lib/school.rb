@@ -23,4 +23,5 @@ class School
       @roster.each{|grade, students| students.sort!}
       @roster
     end
+  end
 end
