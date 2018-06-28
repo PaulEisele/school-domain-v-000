@@ -18,6 +18,7 @@ class School
       @roster[grade]=[]
       @roster[grade]<<name
     end
+  end
 
     def sort
       @roster.each{|grade, students| students.sort!}
