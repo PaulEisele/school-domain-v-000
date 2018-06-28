@@ -3,9 +3,9 @@ class School
   attr_reader :roster
 
   def initialize(name)
-    @name= name 
+    @name= name
     @roster= {}
-  end 
+  end
 
   def grade(grade)
     @roster[grade]
@@ -13,16 +13,14 @@ class School
 
   def add_student(name, grade)
     if @roster.key.include?(grade)
-      @roster[grade]<<name 
-    else 
+      @roster[grade]<<name
+    else
       @roster[grade]=[]
-      @roster[grade]<<name 
+      @roster[grade]<<name
     end
 
     def sort
-      @roster.each do |grade, students|
-        students.sort!
-      end
+      @roster.each{|grade, students| students.sort!}
       @roster
     end
 end
